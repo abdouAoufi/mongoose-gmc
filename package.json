@@ -18,6 +18,6 @@
   "homepage": "https://github.com/abdouAoufi/mongoose-gmc#readme",
   "dependencies": {
     "express": "^4.18.1",
-    "validator": "^13.7.0"
+    "express-validator": "^6.14.2"
   }
 }
