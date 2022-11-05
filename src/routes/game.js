@@ -7,18 +7,21 @@ import {
  updateGame,
  deleteGame
 } from "../controllers/game.js"
-import { createGameValidation } from "../validation/game-validation.js";
+import {
+ createGameValidation,
+ deleteGameValidation
+} from "../validation/game-validation.js";
 
 const gameRouter = Router();
 
 
-gameRouter.get("/games", getGames);
+gameRouter.get("/game", getGames);
 
-gameRouter.post("/create-game", createGameValidation, createGame);
+gameRouter.post("/game", createGameValidation, createGame);
 
-gameRouter.post("/update-game", updateGame);
+gameRouter.put("/game", createGameValidation, updateGame);
 
-gameRouter.post("/delete-game", deleteGame);
+gameRouter.delete("/game", deleteGameValidation, deleteGame);
 
 
 export default gameRouter;

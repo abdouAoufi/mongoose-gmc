@@ -8,7 +8,7 @@ export const createGameValidation = [
   max: 20
  }), body("publisher").isString().isLength({
   min: 2,
-  max: 20
+  max: 40
  }),
  body("platform").isString().isLength({
   min: 3
@@ -19,3 +19,11 @@ export const createGameValidation = [
   max: 10
  })
 ]
+
+
+export const deleteGameValidation = [
+ body("name").isString().isLength({
+  min: 4,
+  max: 20
+ })
+];

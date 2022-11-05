@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start" : "nodemon ./src/server.js"
+    "start": "nodemon ./src/server.js"
   },
   "repository": {
     "type": "git",
@@ -20,6 +20,7 @@
   "homepage": "https://github.com/abdouAoufi/mongoose-gmc#readme",
   "dependencies": {
     "express": "^4.18.1",
-    "express-validator": "^6.14.2"
+    "express-validator": "^6.14.2",
+    "mongoose": "^6.6.1"
   }
 }

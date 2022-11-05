@@ -1,8 +1,14 @@
 import express from "express";
 import gameRouter from "./routes/game.js";
 import {
+ connect
+} from "mongoose";
+import {
  INFO
 } from "./utils/utils.js";
+
+
+const DB_URL = `mongodb://localhost:${INFO.DB_PORT}/gamedb`;
 
 const app = express();
 
@@ -19,7 +25,8 @@ app.use("*", (req, res, next) => {
 })
 
 
-
-app.listen(INFO.PORT, () => {
- console.log("WEB SERVER STARED AT : ", INFO.PORT)
+connect(DB_URL).then(() => {
+ app.listen(INFO.PORT, () => {
+  console.log("WEB SERVER STARED AT : ", INFO.PORT)
+ })
 })
